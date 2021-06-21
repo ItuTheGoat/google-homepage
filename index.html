@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            min-width: 400px;
+        }
+        body, input, button {
+            font-size: 14px;
+            font-family: arial,sans-serif;
+            color: #222;
+        }
+        body {
+            background: #fff;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .box-type {
+            flex-shrink: 0;
+            box-sizing: border-box;
+        }
+
+        .header-section {
+            height: 60px;
+        }
+
+        .header-nav {
+            height: 48px;
+            padding: 6px;
+           
+        }
+
+        .nav-links {
+            float: right;
+            border: black 1px solid;
+            box-sizing: border-box;
+            height: 48px;
+            vertical-align: middle;
+
+        }
+
+        
+        .logo-section {
+            min-height: 150px;
+            max-height: 290px;
+            height: calc(100% - 560px);
+        }
+
+        .form-section {
+            padding: 20px;
+            max-height: 160px;
+        }
+  
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header-section box-type">
+            <ul>
+                <li>Gmail</li>
+                <li>Images</li>
+            </ul>
+            
+        </div>
+        <div class="logo-section box-type"></div>
+            <div class="form-section box-type"></div>
+            
+            <div class="footer-section box-type"></div>
+    </div>
+</body>
+</html>
