@@ -1,90 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body,
+			html {
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			html,
+			body {
+				min-width: 400px;
+			}
+			body,
+			input,
+			button {
+				font-size: 14px;
+				font-family: arial, sans-serif;
+				color: #222;
+			}
+			body {
+				background: #fff;
+			}
 
-        body, html {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        html, body {
-            min-width: 400px;
-        }
-        body, input, button {
-            font-size: 14px;
-            font-family: arial,sans-serif;
-            color: #222;
-        }
-        body {
-            background: #fff;
-        }
+			.main-container {
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+			}
 
-        .main-container {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
+			.box-type {
+				flex-shrink: 0;
+				box-sizing: border-box;
+			}
 
-        .box-type {
-            flex-shrink: 0;
-            box-sizing: border-box;
-        }
+			.header-section {
+				height: 60px;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+			}
 
-        .header-section {
-            height: 60px;
-        }
+			/* Styling for the header */
+			.header-nav {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+			}
 
-        .header-nav {
-            height: 48px;
-            padding: 6px;
-           
-        }
+			.nav-links {
+				padding: 14px 15px;
+				text-align: center;
+				text-decoration: none;
+				color: black;
 
-        .nav-links {
-            float: right;
-            border: black 1px solid;
-            box-sizing: border-box;
-            height: 48px;
-            vertical-align: middle;
+				display: inline-block;
+				line-height: 24px;
+				vertical-align: middle;
+			}
 
-        }
+			.header-align {
+				float: right;
+			}
 
-        
-        .logo-section {
-            min-height: 150px;
-            max-height: 290px;
-            height: calc(100% - 560px);
-        }
+			li a:hover {
+				text-decoration: underline;
+			}
 
-        .form-section {
-            padding: 20px;
-            max-height: 160px;
-        }
-  
+			/* Styling for the logo area*/
+			.logo-section {
+				min-height: 150px;
+				max-height: 290px;
+				height: calc(100% - 560px);
+				text-align: center;
+			}
 
+			.logo-img {
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+			}
 
+			/* Search bar section */
+			.form-section {
+				padding: 20px;
+				max-height: 160px;
+				display: flex;
+				flex-direction: row;
+			}
 
+			input {
+				height: 34px;
+				font-size: 16px;
+				color: rgba(0, 0, 0, 0.87);
+				flex: 6;
+			}
+			button {
+				flex: 3;
+			}
 
-    </style>
-</head>
-<body>
-    <div class="main-container">
-        <div class="header-section box-type">
-            <ul>
-                <li>Gmail</li>
-                <li>Images</li>
-            </ul>
-            
-        </div>
-        <div class="logo-section box-type"></div>
-            <div class="form-section box-type"></div>
-            
-            <div class="footer-section box-type"></div>
-    </div>
-</body>
+			.footer-section {
+				height: 60px;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+			}
+
+			.footer-nav {
+				list-style-type: none;
+			}
+
+			.footer-align {
+				float: left;
+			}
+
+			.footer-link {
+				color: #70757a;
+				text-decoration: none;
+				padding: 14px 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main-container">
+			<div class="header-section box-type">
+				<ul class="header-nav">
+					<li class="header-align">
+						<a href="#" class="nav-links"> Images </a>
+					</li>
+					<li class="header-align"><a href="#" class="nav-links">Gmail</a></li>
+				</ul>
+			</div>
+
+			<div class="logo-section box-type">
+				<img class="logo-img" src="./google-logo.png" alt="google-logo" />
+			</div>
+			<div class="form-section box-type">
+				<input type="text" />
+				<button>Google Search</button>
+				<button>I'm feeling lucky</button>
+			</div>
+
+			<div class="footer-section box-type">
+				<ul class="footer-nav">
+					<li class="footer-align">
+						<a class="footer-link" href="#">About</a>
+					</li>
+					<li class="footer-align">
+						<a class="footer-link" href="#">Advertising</a>
+					</li>
+					<li class="footer-align">
+						<a class="footer-link" href="#">Business</a>
+					</li>
+					<li class="footer-align">
+						<a class="footer-link" href="#">How search works</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
 </html>
