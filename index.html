@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -89,40 +94,113 @@
 			/* Search bar section */
 			.form-section {
 				padding: 20px;
-				max-height: 160px;
+				height: 160px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			.input-row {
+				display: flex;
+				justify-content: center;
+			}
+
+			.button-row {
+				display: flex;
+				justify-content: center;
+			}
+
+			.button-box {
+				display: flex;
+			}
+
+			.input-box {
 				display: flex;
 				flex-direction: row;
+				border: 1px solid #dfe1e5;
+				border-radius: 24px;
+				height: 44px;
+				width: 500px;
+				max-width: 584px;
+				align-items: center;
+				justify-content: center;
+				color: #70757a;
+			}
+
+			.input-box:hover {
+				box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+			}
+
+			.input-box-flex {
+				flex: 1;
+				display: flex;
+				align-items: center;
+				padding: 0 15px;
 			}
 
 			input {
+				flex: 1;
 				height: 34px;
-				font-size: 16px;
-				color: rgba(0, 0, 0, 0.87);
-				flex: 6;
+				background-color: transparent;
+				border: none;
+				outline: none;
+				margin: 0;
+				padding: 0;
 			}
+
 			button {
-				flex: 3;
+				background-color: #f8f9fa;
+				border: 1px solid #f8f9fa;
+				border-radius: 4px;
+				color: #3c4043;
+				font-size: 14px;
+				margin: 11px 4px;
+				padding: 0 16px;
+				height: 36px;
+				min-width: 54px;
+				cursor: pointer;
+			}
+
+			button:hover {
+				box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+				background-color: #f8f9fa;
+				border: 1px solid #dadce0;
 			}
 
 			.footer-section {
-				height: 60px;
+				min-height: 60px;
+				width: 100%;
 				display: flex;
 				align-items: center;
 				justify-content: flex-end;
+				position: fixed;
+				flex-direction: row;
+				flex-wrap: wrap;
+				bottom: 0;
+				text-align: center;
+				justify-content: space-between;
+				background: #f2f2f2;
 			}
 
-			.footer-nav {
-				list-style-type: none;
-			}
-
-			.footer-align {
-				float: left;
+			.footer-left,
+			.footer-right {
+				flex: 1;
+				height: 60px;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
 			}
 
 			.footer-link {
 				color: #70757a;
 				text-decoration: none;
 				padding: 14px 15px;
+				white-space: nowrap;
+			}
+
+			.footer-link:hover {
+				text-decoration: underline;
 			}
 		</style>
 	</head>
@@ -141,26 +219,36 @@
 				<img class="logo-img" src="./google-logo.png" alt="google-logo" />
 			</div>
 			<div class="form-section box-type">
-				<input type="text" />
-				<button>Google Search</button>
-				<button>I'm feeling lucky</button>
+				<div class="input-row">
+					<div class="input-box">
+						<div class="input-box-flex">
+							<span class="material-icons">search</span>
+							<input type="text" />
+							<span class="material-icons">mic</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="button-row">
+					<div class="button-box">
+						<button>Google Search</button>
+						<button>I'm Feeling lucky</button>
+					</div>
+				</div>
 			</div>
 
 			<div class="footer-section box-type">
-				<ul class="footer-nav">
-					<li class="footer-align">
-						<a class="footer-link" href="#">About</a>
-					</li>
-					<li class="footer-align">
-						<a class="footer-link" href="#">Advertising</a>
-					</li>
-					<li class="footer-align">
-						<a class="footer-link" href="#">Business</a>
-					</li>
-					<li class="footer-align">
-						<a class="footer-link" href="#">How search works</a>
-					</li>
-				</ul>
+				<div class="footer-left">
+					<a class="footer-link" href="#">About</a>
+					<a class="footer-link" href="#">Advertising</a>
+					<a class="footer-link" href="#">Business</a>
+					<a class="footer-link" href="#">How search works</a>
+				</div>
+				<div class="footer-right">
+					<a class="footer-link" href="#">Privacy</a>
+					<a class="footer-link" href="#">Terms</a>
+					<a class="footer-link" href="#">Settings</a>
+				</div>
 			</div>
 		</div>
 	</body>
